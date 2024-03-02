@@ -22,4 +22,9 @@ class vehicle
         return $this->speed;
     }
 
+    public function calculateTime($distance)
+    {
+        return round($distance / $this->speed, 2);
+    }
+
 }
