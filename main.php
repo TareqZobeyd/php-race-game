@@ -16,6 +16,7 @@ foreach ($vehiclesData as $index => $vehicle) {
     $choices[] = $vehicle['name'];
 }
 
-// Create vehicles objects based on player selections
 $selectedVehicleIndex1 = cli\menu($choices, false, "Player 1, choose your vehicle:");
 $selectedVehicleIndex2 = cli\menu($choices, false, "Player 2, choose your vehicle:");
+
+
