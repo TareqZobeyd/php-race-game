@@ -30,3 +30,11 @@ $race = new Race($player1Vehicle, $player2Vehicle);
 $distance = 1000; //for example
 [$player1Time, $player2Time] = $race->start($distance);
 
+// Declare the winner
+if ($player1Time < $player2Time) {
+    $winner = "Player 1";
+} elseif ($player1Time > $player2Time) {
+    $winner = "Player 2";
+} else {
+    $winner = "It's a tie!";
+}
