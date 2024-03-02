@@ -3,6 +3,16 @@
 require_once 'Vehicle.php';
 require_once 'Race.php';
 require_once './php-cli-tools/lib/cli/cli.php';
+require_once './php-cli-tools/lib/cli/streams.php';
+require_once './php-cli-tools/lib/cli/colors.php';
+require_once './php-cli-tools/lib/cli/Table.php';
+require_once './php-cli-tools/lib/cli/Shell.php';
+require_once './php-cli-tools/lib/cli/table/Renderer.php';
+require_once './php-cli-tools/lib/cli/table/Ascii.php';
+
+
+use cli\Table;
+
 
 // Load vehicles data from JSON file
 $vehiclesData = json_decode(file_get_contents('vehicles.json'), true);
@@ -38,3 +48,12 @@ if ($player1Time < $player2Time) {
 } else {
     $winner = "It's a tie!";
 }
+
+// Display race results
+$table = new Table();
+$table->setHeaders(['Player', 'Vehicle', 'Time Taken']);
+$table->addRow(['Player 1', $player1Vehicle->getName(), $player1Time . ' seconds']);
+$table->addRow(['Player 2', $player2Vehicle->getName(), $player2Time . ' seconds']);
+$table->display();
+
+cli\line("Winner: $winner");
