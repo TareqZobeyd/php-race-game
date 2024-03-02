@@ -24,3 +24,9 @@ $player1Vehicle = new Vehicle($vehiclesData[$selectedVehicleIndex1]['name'],
     $vehiclesData[$selectedVehicleIndex1]['speed']);
 $player2Vehicle = new Vehicle($vehiclesData[$selectedVehicleIndex2]['name'],
     $vehiclesData[$selectedVehicleIndex2]['speed']);
+
+// Start the game
+$race = new Race($player1Vehicle, $player2Vehicle);
+$distance = 1000; //for example
+[$player1Time, $player2Time] = $race->start($distance);
+
