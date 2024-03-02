@@ -12,4 +12,14 @@ class vehicle
         $this->speed = $speed;
     }
 
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getSpeed()
+    {
+        return $this->speed;
+    }
+
 }
