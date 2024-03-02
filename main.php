@@ -9,3 +9,9 @@ $vehiclesData = json_decode(file_get_contents('vehicles.json'), true);
 
 // Initialize CLI prompts and outputs
 cli\line("Welcome to the Racing Game!");
+
+// Display vehicle selection menu
+$choices = [];
+foreach ($vehiclesData as $index => $vehicle) {
+    $choices[] = $vehicle['name'];
+}
