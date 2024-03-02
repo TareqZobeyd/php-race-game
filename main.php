@@ -51,9 +51,9 @@ if ($player1Time < $player2Time) {
 
 // Display race results
 $table = new Table();
-$table->setHeaders(['Player', 'Vehicle', 'Time Taken']);
-$table->addRow(['Player 1', $player1Vehicle->getName(), $player1Time . 'seconds']);
-$table->addRow(['Player 2', $player2Vehicle->getName(), $player2Time . 'seconds']);
+$table->setHeaders(['Player', 'Vehicle', 'Speed', 'Time Taken']); // Include 'Speed' column
+$table->addRow(['Player 1', $player1Vehicle->getName(), $player1Vehicle->getSpeed(), $player1Time . ' seconds']);
+$table->addRow(['Player 2', $player2Vehicle->getName(), $player2Vehicle->getSpeed(), $player2Time . ' seconds']);
 $table->display();
 
 cli\line("Winner: $winner");
