@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Lexus",
+    "speed": 10
+  },
+  {
+    "name": "Benz",
+    "speed": 20
+  },
+  {
+    "name": "BMW",
+    "speed": 40
+  }
+]

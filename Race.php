@@ -18,6 +18,5 @@ class Race
         $player2Time = $this->player2Vehicle->calculateTime($distance);
 
         return [$player1Time, $player2Time];
-
     }
 }
