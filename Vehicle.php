@@ -40,7 +40,8 @@ class vehicle
 
     public function calculateTime($distance)
     {
-        return round($distance / $this->speed, 2);
+        $speedInKmPerHour = $this->getSpeedInKmPerHour();
+        return round($distance / $speedInKmPerHour, 2);
     }
 
 }
