@@ -12,4 +12,11 @@ require_once './php-cli-tools/lib/cli/table/Ascii.php';
 class RacingGame
 {
 
+    private $vehicles;
+
+    public function __construct(array $vehicles)
+    {
+        $this->vehicles = $vehicles;
+    }
+
 }
