@@ -4,12 +4,14 @@ class vehicle
 {
 
     private $name;
-    private $speed;
+    private $maxSpeed;
+    private $unit;
 
-    public function __construct($name, $speed)
+    public function __construct($name, $maxSpeed, $unit)
     {
         $this->name = $name;
-        $this->speed = $speed;
+        $this->maxSpeed = $maxSpeed;
+        $this->unit = $unit;
     }
 
     public function getName()
