@@ -24,6 +24,11 @@ class vehicle
         return $this->maxSpeed;
     }
 
+    public function getUnit()
+    {
+        return $this->unit;
+    }
+
     // Convert speed to a common unit (Km/h) for calculation
     public function getSpeedInKmPerHour()
     {
