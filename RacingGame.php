@@ -9,6 +9,9 @@ require_once './php-cli-tools/lib/cli/Table.php';
 require_once './php-cli-tools/lib/cli/Shell.php';
 require_once './php-cli-tools/lib/cli/table/Renderer.php';
 require_once './php-cli-tools/lib/cli/table/Ascii.php';
+
+use cli\Table;
+
 class RacingGame
 {
 
